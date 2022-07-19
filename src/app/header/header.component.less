@@ -1,0 +1,310 @@
+@media only screen and (min-width: 0em) {
+  header {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    height: 3em;
+    justify-content: space-around;
+    box-shadow: -5px 0 22px -1px rgb(0 0 0 / 15%);
+  }
+  .logo{
+    padding-left: 3em;
+    z-index: 21;
+    position: relative;
+    background-color: #292a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      color: white;
+      font-size: 1em;
+    }
+  }
+  .logo:after {
+    content: "";
+    position:relative;
+    right: -1.3em;
+    border-style: solid;
+    border-width: 80px 31px 0 0;
+    border-color: #292a2f transparent transparent transparent;
+}
+  .noColor {
+    background-color: white;
+  }
+  .color {
+    background-color: white;
+  }
+  .navigation{
+    position: relative;
+    height: 100%;
+    width: 90%;
+    background-color: yellow;
+    z-index: 20;
+  }
+  .navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      margin-right: 1.225em;
+    }
+  }
+  ul {
+    list-style-type: none;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: black;
+  }
+  .navList {
+    li {
+      span:hover {
+        border-bottom: 5px solid white;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // Hamburger Menu Default State
+  .hamburger-menu {
+    border: none;
+    height: 48/16em;
+    width: 48/16em;
+    z-index: 100;
+    display: block;
+    background: transparent;
+    padding: 0;
+    transform: translateY(-50%);
+    transition: top 0.3s;
+
+    span {
+      height: 2px;
+      width: 30px;
+      background-color: #000;
+      display: block;
+      position: absolute;
+
+      //transition properties
+      transition: background-color 0.3s;
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 80%;
+        background: #000;
+        opacity: 1;
+        top: -6px;
+        left: 0;
+
+        //transition properties
+        transition: width 0.3s, left 0.3s, top 0.3s, transform 0.5s;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 80%;
+        background: #000;
+        opacity: 1;
+        top: 6px;
+        left: 0;
+
+        //transition properties
+        transition: width 0.3s, left 0.3s, top 0.3s, transform 0.3s;
+      }
+    }
+  }
+
+  // Hamburger Menu Open State
+  .hamburger-menu.clicked {
+    span {
+      background-color: transparent;
+      &:before {
+        width: 100%;
+        transform: translate(-50%, -50%) rotate(225deg);
+        left: 50%;
+        top: 50%;
+      }
+
+      &:after {
+        width: 100%;
+        transform: translate(-50%, -50%) rotate(-225deg);
+        left: 50%;
+        top: 50%;
+      }
+    }
+  }
+
+  // Navbar Menu Default State
+  #navbar-menu {
+    position: fixed;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0 0 6/16em 6/16em;
+    z-index: -1;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    top: 64/16em; // same as #navigation height
+
+    //Transition Properties
+    padding-top: 0;
+    height: 0;
+    transition: height 0.3s, padding-top 0.3s, top 0.3s;
+
+    ul {
+      padding: 0;
+      perspective: 700px;
+      li {
+        list-style: none;
+        margin-bottom: 24/16em;
+        text-align: center;
+        //Transition Properties
+        transform-style: preserve-3d;
+        opacity: 0;
+        transform: translateY(-7/16em) rotateX(90deg);
+        transition: opacity 0.5s, transform 0.5s;
+
+        //Staggar their transitions
+        &:nth-of-type(1) {
+          transition-delay: 0.1s;
+        }
+        &:nth-of-type(2) {
+          transition-delay: 0.2s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 0.3s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 0.4s;
+        }
+        &:nth-of-type(5) {
+          transition-delay: 0.5s;
+        }
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #000;
+          font-size: 19/16em;
+          text-align: center;
+          display: inline-block;
+          position: relative;
+          font-weight: bold;
+
+          // Active State
+          &.active {
+            &:before {
+              content: "";
+              position: absolute;
+              display: block;
+              height: 8/19em;
+              background: var(--primary);
+              opacity: 1;
+              bottom: 5/19em;
+              border-radius: 4/19em;
+              left: -6/19em;
+              right: -6/19em;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .navListMenu {
+    height: 13em;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navListPhone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 85%;
+      height: 80%;
+      margin-top: 2.5em;
+      a {
+        height: 100%;
+        color: black !important;
+        margin: 0;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-bottom: 2px solid black;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 374px) {
+  .navList {
+    font-size: 0.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    box-shadow: none;
+  }
+  .navList {
+    font-size: 1.5rem;
+  }
+  .noColor {
+    background-color: transparent;
+    color: white;
+  }
+  .color {
+    color: #000 ;
+    span:hover {
+      border-bottom: 5px solid #ffba19 ;
+      padding-bottom: 5px;
+      
+    }
+  }
+  .logo{
+    padding-left: 0;
+    padding-top: 0px;
+    z-index: 21;
+    position: relative;
+    background-color: #292a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      padding-left: 8em;
+      color: white;
+      font-size: 1em;
+    }
+  }
+  .logo:after {
+    content: "";
+    position:relative;
+    height: 0;
+    border-style: solid;
+    border-width: 3em 31px 0 0;
+    border-color: #292a2f transparent transparent transparent;
+}
+}

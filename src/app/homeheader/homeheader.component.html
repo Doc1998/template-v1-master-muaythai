@@ -1,0 +1,66 @@
+<header
+  #navigation
+>
+  <div class="logo">
+   <a href="/home">
+    IRISH MUAYTHAI
+   </a>
+  </div>
+  <div class="navigation">
+    <ul class="navList" *ngIf="!phoneView">
+      <li>
+        <span
+          ><a href="/events"
+            >Events</a
+          ></span
+        >
+      </li>
+      <li>
+        <span
+          ><a href="/rankings"
+            >Rankings</a
+          ></span
+        >
+      </li>
+      <li>
+        <span
+          ><a href="/news"
+            >News</a
+          ></span
+        >
+      </li>
+      <li>
+        <span
+          ><a href="/record-lookup"
+            >Records</a
+          ></span
+        >
+      </li>
+      <li>
+        <span
+          ><a href="/contact"
+            >Contact</a
+          ></span
+        >
+      </li>
+    </ul>
+    <!--Mobile Nav toggle-->
+    <button
+      class="hamburger-menu"
+      (click)="dropDownMenu(ham)"
+      #ham
+      *ngIf="phoneView"
+    >
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+<div class="navListMenu" *ngIf="showDropDown">
+  <ul class="navListPhone">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/events">Events</a></li>
+    <li><a href="/news">News</a></li>
+    <li><a href="/rankings">Rankings</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</div>
