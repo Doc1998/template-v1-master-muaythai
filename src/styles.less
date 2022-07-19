@@ -7,7 +7,7 @@
 
     // Website colors
     :root {
-        --primary: #FFBA19;
+        --primary: yellow;
         --primaryShade: #ffd675;
         --primaryDark: #805d0d;
         --bodyText: #1a1a1a;
@@ -17,26 +17,17 @@
     
     /* roboto-regular - latin */
     @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        src: local('')
-    }
-    /* roboto-700 - latin */
-    @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        src: local('')
-    }
-    /* roboto-900 - latin */
-    @font-face {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 900;
-        src: local('')
-    }
-    
+        font-family: 'poppins';
+        src: url('/assets/Poppins-Medium.ttf');
+      }
+      @font-face {
+        font-family: 'poppins-light';
+        src: url('/assets/Poppins-Light.ttf');
+      }
+      @font-face {
+        font-family: 'poppins-bold';
+        src: url('/assets/Poppins-Bold.ttf');
+      }
     body, html {
         margin: 0;
         padding: 0;
@@ -87,7 +78,7 @@
     /* CSS */
     .button-6 {
         align-items: center;
-        background-color: #FFBA19;
+        background-color: yellow;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: .25rem;
         box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
