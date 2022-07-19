@@ -9,6 +9,7 @@ import { ReviewsComponent } from "./reviews/reviews.component";
 const routes: Routes = [
   { path: "home", component: LandingComponent },
   { path: "", component: LandingComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
