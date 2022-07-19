@@ -14,6 +14,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeheaderComponent } from './homeheader/homeheader.component';
+import { NewsComponent } from './news/news.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { LatestNewsComponent } from './latest-news/latest-news.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HomeheaderComponent } from './homeheader/homeheader.component';
     ReviewsComponent,
     ProjectsComponent,
     ContactComponent,
-    HomeheaderComponent
+    HomeheaderComponent,
+    NewsComponent,
+    SidebarComponent,
+    LatestNewsComponent
   ],
   imports: [
     BrowserModule,

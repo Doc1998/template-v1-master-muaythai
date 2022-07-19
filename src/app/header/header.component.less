@@ -4,7 +4,7 @@
     position: relative;
     z-index: 1000;
     display: flex;
-    height: 3em;
+    height: 6em;
     justify-content: space-around;
     box-shadow: -5px 0 22px -1px rgb(0 0 0 / 15%);
 
@@ -27,7 +27,7 @@
     position:relative;
     right: -1.3em;
     border-style: solid;
-    border-width: 80px 31px 0 0;
+    border-width: 6em 31px 0 0;
     border-color: #292a2f transparent transparent transparent;
 }
   .noColor {
@@ -232,7 +232,7 @@
     width: 100%;
     position: fixed;
     z-index: 10;
-    background-color: white;
+    background-color: #292a2f;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     display: flex;
     justify-content: center;
@@ -244,10 +244,10 @@
       justify-content: space-around;
       width: 85%;
       height: 80%;
-      margin-top: 2.5em;
+      margin-top: 1.5em;
       a {
         height: 100%;
-        color: black !important;
+        color: white !important;
         margin: 0;
       }
       li {
@@ -255,7 +255,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--primary);
         padding-bottom: 5px;
       }
     }
@@ -269,6 +269,7 @@
 @media only screen and (min-width: 1024px) {
   header {
     box-shadow: none;
+    height: 6em;
   }
   .navList {
     font-size: 1.5rem;
@@ -305,7 +306,7 @@
     position:relative;
     height: 0;
     border-style: solid;
-    border-width: 3em 31px 0 0;
+    border-width: 6em 31px 0 0;
     border-color: #292a2f transparent transparent transparent;
 }
 }
